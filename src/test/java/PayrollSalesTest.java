@@ -9,7 +9,7 @@ public class PayrollSalesTest {
     @Test
     public void receiveBonusSales(){
         PayrollSales underTestSales = new PayrollSales(002, "Jane", "Doe", 550.00, 200.00, 3000.00);
-
+        double result =underTestSales.receiveBonus(100.00);
     }
 
     }
