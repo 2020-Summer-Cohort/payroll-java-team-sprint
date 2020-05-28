@@ -13,6 +13,10 @@ public class PayrollEmployee {
         this.lastName = lastName;
     }
 
+    public PayrollEmployee() {
+
+    }
+
     public int getEmployeeId() {
         return employeeId;
     }
