@@ -6,8 +6,10 @@ private double hourlyRate=20.00;
     public HourlyEmployee(int employeeId, String firstName, String lastName) {
         super(employeeId, firstName, lastName);
     }
-    public void hoursWorked(){
-        hoursWorked();
+
+    @Override
+    public void setPaycheckTotal() {
+        paycheckTotal = hoursWorked * hourlyRate;
     }
 
     public int getHoursWorked() {
@@ -20,9 +22,5 @@ private double hourlyRate=20.00;
 
     public void setHoursWorked(int hoursWorked) {
         this.hoursWorked = hoursWorked;
-    }
-
-    public void setHourlyRate(double hourlyRate) {
-        this.hourlyRate = hourlyRate;
     }
 }

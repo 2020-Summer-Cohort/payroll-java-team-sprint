@@ -1,15 +1,29 @@
 package payrollapp;
 
-public class PayrollSales extends PayrollEmployee {
+public class PayrollSales extends PayrollEmployee implements ReceiveBonus {
 
 
     private double salesCommission;
-    private double payPeriodEarnings;
+    private double payPeriodEarnings = 300.00;
 
     public PayrollSales(int employeeId, String firstName, String lastName) {
         super(employeeId, firstName, lastName);
-        this.salesCommission = salesCommission;
-        this.payPeriodEarnings = payPeriodEarnings;
+
+    }
+
+    @Override
+    public void receiveBonus(double bonus) {
+        paycheckTotal += bonus;
+    }
+
+    @Override
+    public void setPaycheckTotal() {
+        paycheckTotal = payPeriodEarnings + salesCommission;
+    }
+
+    @Override
+    public double getPaycheckTotal() {
+        return paycheckTotal;
     }
 
     public double getSalesCommission() {
@@ -20,16 +34,9 @@ public class PayrollSales extends PayrollEmployee {
         return payPeriodEarnings;
     }
 
-    public void setPayPeriodEarnings(double payPeriodEarnings) {
-        this.payPeriodEarnings = 3000.00;
-    }
-
     public void setSalesCommission(double salesCommission) {
         this.salesCommission = salesCommission;
     }
-//
-//    @Override
-//    public double receiveBonus(bonus) {
-//        return bonus;
-//    }
+
+
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class CompanyRoster extends PayrollEmployee {
 
     private double bonusAmount;
+    private ArrayList<PayrollEmployee> companyRoster = new ArrayList<>();
 
     public CompanyRoster(int employeeId, String firstName, String lastName) {
         super();
@@ -24,12 +25,20 @@ public class CompanyRoster extends PayrollEmployee {
 
     public void calculatePaycheckTotal(double bonusAmount) {
         for (PayrollEmployee employee : companyRoster) {
-            employee.setPaycheckTotal(bonusAmount);
+            employee.setPaycheckTotal();
+            if (employee instanceof ReceiveBonus) {
+                ((ReceiveBonus) employee).receiveBonus(bonusAmount);
+            } if (employee instanceof Insurance) {
+                ((Insurance) employee).payInsurance();
+            }
         }
     }
 
 
-    ArrayList<PayrollEmployee> companyRoster = new ArrayList<>();
+    public ArrayList<PayrollEmployee> getCompanyRoster() {
+        return companyRoster;
+    }
+
 
     public ArrayList getPayrollEmployees() {
         PayrollDeveloper employee2 = new PayrollDeveloper(002, "Jimmy", "Buffet");

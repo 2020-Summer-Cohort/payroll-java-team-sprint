@@ -32,8 +32,9 @@ public class PayrollEmployee {
     public double getPaycheckTotal() {
         return paycheckTotal;
     }
- public void setPaycheckTotal(double pct){
-        paycheckTotal=pct;
+
+    public void setPaycheckTotal(){
+
  }
 
 }
