@@ -8,7 +8,7 @@ public class EmployeeTest {
     // string first name
     @Test
     public void createPayrollEmployee(){
-        PayrollEmployee underTest= new PayrollEmployee(001,"John","Doe",500.00);
+        PayrollEmployee underTest= new PayrollEmployee(001,"John","Doe");
 
     }
 

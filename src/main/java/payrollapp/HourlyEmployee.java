@@ -3,8 +3,8 @@ package payrollapp;
 public class HourlyEmployee extends PayrollEmployee  {
 private int hoursWorked;
 private double hourlyRate=20.00;
-    public HourlyEmployee(int employeeId, String firstName, String lastName, double paycheckTotal,int hoursWorked,double hourlyRate) {
-        super(employeeId, firstName, lastName, paycheckTotal);
+    public HourlyEmployee(int employeeId, String firstName, String lastName) {
+        super(employeeId, firstName, lastName);
     }
     public void hoursWorked(){
         hoursWorked();

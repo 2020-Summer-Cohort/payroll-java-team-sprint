@@ -4,14 +4,13 @@ public class PayrollEmployee {
     private int employeeId;
     private  String firstName;
     private  String lastName;
-    private double paycheckTotal;
+    protected double paycheckTotal;
 
-    public PayrollEmployee(int employeeId, String firstName, String lastName, double paycheckTotal) {
+    public PayrollEmployee(int employeeId, String firstName, String lastName) {
 
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.paycheckTotal = paycheckTotal;
     }
 
     public int getEmployeeId() {
