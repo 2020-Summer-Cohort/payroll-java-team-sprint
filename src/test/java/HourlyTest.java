@@ -4,7 +4,7 @@ import payrollapp.HourlyEmployee;
 public class HourlyTest {
     @Test
     public void createHourlyEmployee(){
-        HourlyEmployee underHourlyTest = new HourlyEmployee(003,"James","Smith",800.00);
+        HourlyEmployee underHourlyTest = new HourlyEmployee(003,"James","Smith");
     }
 
 }
