@@ -11,13 +11,6 @@ public class PayrollDeveloperTest {
     }
 
     @Test
-    public void shouldPayInsurance() {
-        PayrollDeveloper underTest = new PayrollDeveloper(004, "John", "Smith");
-        double insuranceAmount = underTest.payInsurance();
-        assertEquals(80.00, insuranceAmount);
-    }
-
-    @Test
     public void shouldGetPayPeriodEarnings() {
         PayrollDeveloper underTest = new PayrollDeveloper(004, "John", "Smith");
         double earningsAmount = underTest.getPayPeriodEarnings();

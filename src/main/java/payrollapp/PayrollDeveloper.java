@@ -5,11 +5,6 @@ public class PayrollDeveloper extends PayrollEmployee implements ReceiveBonus, I
     public PayrollDeveloper(int employeeId, String firstName, String lastName) {
         super(employeeId, firstName, lastName);
     }
-//
-//    @Override
-//    public void receiveBonus(double bonus) {
-//
-//    }
 
     @Override
     public void payInsurance() {
@@ -22,7 +17,7 @@ public class PayrollDeveloper extends PayrollEmployee implements ReceiveBonus, I
 
     @Override
     public void receiveBonus(double bonus) {
-        paycheckTotal += bonus;
+        paycheckTotal += bonus * 3;
     }
 
     public void setPaycheckTotal() {
